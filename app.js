@@ -97,3 +97,28 @@ $pet.detach();
 
 $container.append($pet);
 $ul.append($leash);
+
+const $h4Wand = $('#container h4:contains("Elder Wand")');
+$h4Wand.remove();
+
+$('ul[storage="trunk"] li:contains("Butter Beer")').remove();
+
+const $newWand = $('<h4>').text('New Wand: Phoenix Feather Core').css('color', 'indigo');
+    $('.pet-type').after($newWand);
+
+    const $pet = $('.pet-type');
+    const $leash = $('ul[storage="trunk"] li.pet-type').detach();
+    $pet.detach();
+
+    $('#container').append($pet);
+    $('ul[storage="trunk"]').append($leash);
+
+    $('.secret').hide('slow').delay(2000);
+
+    setTimeout(() => {
+        $('.secret').show('slow');
+    }, 2000);
+    
+    $('.pet-type.leash').addClass('cabbage'); 
+
+    $('.pet-type.leash').removeClass('cabbage');
