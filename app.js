@@ -83,3 +83,17 @@ days.forEach(day => {
 
     $container.append($table);
 });
+
+$h4Wand.remove();
+
+$ul.find('li:contains("butter beer")').remove();
+
+const $neWand = $('<h4>').text('Your New Wand').css('color', 'indigo')
+$container.append($newWand);
+
+const $pet = $container.find('.pet-type');
+const $leash = $ul.find('li.pet-type').detach();
+$pet.detach();
+
+$container.append($pet);
+$ul.append($leash);
