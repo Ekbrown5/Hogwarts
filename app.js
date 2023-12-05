@@ -122,3 +122,11 @@ const $newWand = $('<h4>').text('New Wand: Phoenix Feather Core').css('color', '
     $('.pet-type.leash').addClass('cabbage'); 
 
     $('.pet-type.leash').removeClass('cabbage');
+
+    $('h5').text('Fall 2018');
+
+    $('ul[storage="chest"]').prepend('<li>Butter beer</li>');
+
+    $('ul[storage="trunk"]').attr('storage', 'chest');
+
+    
